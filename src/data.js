@@ -13,14 +13,14 @@ export const sliderItems = [
     desc: "FLAT 30% OFF ON SAMSUNG REFREGERATORS",
     bg: "f0dffb",
     title: "STAY COOL WITH SAMSUNG FRIDGES",
-    height: "75%",
+    height: "110%",
   },
   {
     id: 3,
     img: "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1613470608.10126241.png",
     desc: "HURRY UP, OFFER ENDING SOON!",
-    height: "100%",
     title: "GET MIN. 25% OFF ON REDMI 9",
+    height: "75%",
     bg: "f0f7fb",
   },
 ];

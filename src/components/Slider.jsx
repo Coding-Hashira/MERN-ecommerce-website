@@ -94,21 +94,17 @@ const Button = styled.button`
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(1);
 
-  useEffect(() => {
-    console.log(slideIndex);
-  }, [slideIndex]);
-
-  const handleClick = (direction) => {
+  const slide = (direction) => {
     if (direction === "left") {
       setSlideIndex(slideIndex < 3 ? slideIndex + 1 : 1);
     } else {
-      setSlideIndex(slideIndex > 1 ? slideIndex - 1 : 3);
+      setSlideIndex(slideIndex === 1 ? 3 : slideIndex - 1);
     }
   };
 
   return (
     <Container>
-      <Arrow direction="left" onClick={() => handleClick("left")}>
+      <Arrow direction="left" onClick={() => slide("left")}>
         <ArrowBackIosNewOutlinedIcon />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
@@ -125,7 +121,7 @@ const Slider = () => {
           </Slide>
         ))}
       </Wrapper>
-      <Arrow direction="right" onClick={() => handleClick("right")}>
+      <Arrow direction="right" onClick={() => slide("right")}>
         <ArrowForwardIosOutlined />
       </Arrow>
     </Container>

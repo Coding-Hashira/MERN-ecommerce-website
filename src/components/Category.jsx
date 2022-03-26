@@ -4,7 +4,13 @@ import styled from "styled-components";
 const Container = styled.div`
   flex: 1;
   margin: 3px;
+  &:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+  }
+  transition: all 300ms;
   height: 70vh;
+  max-height: 70vh;
   position: relative;
 `;
 const Image = styled.img`
@@ -28,23 +34,13 @@ const Info = styled.div`
   flex-direction: column;
   background-color: #3a3a3a3b;
 `;
-const Button = styled.button`
-  border: none;
-  padding: 10px;
-  text-transform: uppercase;
-  background-color: white;
-  color: gray;
-  cursor: pointer;
-  font-weight: 600;
-`;
 
-const Categories = ({ item }) => {
+const Categories = ({ title, image }) => {
   return (
     <Container>
-      <Image src={item?.img} />
+      <Image src={image} />
       <Info>
-        <Title>{item?.title}</Title>
-        <Button>Shop Now</Button>
+        <Title>{title}</Title>
       </Info>
     </Container>
   );

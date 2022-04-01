@@ -15,9 +15,9 @@ const Info = styled.div`
   z-index: 3;
   display: flex;
   align-items: center;
+  justify-content: center;
   transition: all 0.3s ease;
   cursor: pointer;
-  justify-content: center;
 `;
 const Container = styled.div`
   min-width: 280px;

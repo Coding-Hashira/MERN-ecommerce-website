@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Product from "./Product";
-import { popularProducts } from "../data";
+import { popularProducts } from "../../data";
 
 const Container = styled.div`
   padding: 20px;
